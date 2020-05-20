@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "317759600389",
+    "firebase_url": "https://masakkuy-projectmobile.firebaseio.com",
+    "project_id": "masakkuy-projectmobile",
+    "storage_bucket": "masakkuy-projectmobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317759600389:android:2efb53c1ae3cc43fece96c",
+        "android_client_info": {
+          "package_name": "com.example.projectmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317759600389-cslddnmaqbg1g62hmkdcemnf8v7jr7tg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-op8KAyvjtEJ5GSNxY02WP6e7iUlSiqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317759600389-cslddnmaqbg1g62hmkdcemnf8v7jr7tg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
