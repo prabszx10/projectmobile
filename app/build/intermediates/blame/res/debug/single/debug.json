@@ -1,71 +1,167 @@
 [
     {
-        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo2.png.flat",
-        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable\\logo2.png"
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_bg_mobile_4.jpg.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\bg_mobile_4.jpg"
     },
     {
-        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_nextbutton.PNG.flat",
-        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable\\nextbutton.PNG"
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_bottom.png.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\bottom.png"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_landsback.jpg.flat",
         "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable\\landsback.jpg"
     },
     {
-        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_edit_round.xml.flat",
-        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable\\edit_round.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_profile.png.flat",
-        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable\\profile.png"
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_bg_round.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\bg_round.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_signup.xml.flat",
         "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\activity_signup.xml"
     },
     {
-        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_menu_login.xml.flat",
-        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\activity_menu_login.xml"
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_read_recipe.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\activity_read_recipe.xml"
     },
     {
-        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_find_recipe.xml.flat",
-        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\activity_find_recipe.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background2.jpg.flat",
-        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable\\background2.jpg"
-    },
-    {
-        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_welcome.png.flat",
-        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable\\welcome.png"
-    },
-    {
-        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_main.xml.flat",
-        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout-land\\activity_main.xml"
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_background.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\ic_launcher_background.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_back.png.flat",
         "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable\\back.png"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_trophy_icon.png.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\trophy_icon.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_find_icon.png.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\find_icon.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_makanan3.jpg.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\makanan3.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_account_circle_black_24dp.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\ic_account_circle_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_display_recipe.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\activity_display_recipe.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_about_us.png.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable\\about_us.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_home_icon.png.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\home_icon.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo2.png.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable\\logo2.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_profile.png.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable\\profile.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_list_item.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\list_item.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_home_fragment.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\activity_home_fragment.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\menu_options_menu.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\menu\\options_menu.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_main.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout-land\\activity_main.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round.xml.flat",
         "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\round.xml"
     },
     {
-        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_test.jpg.flat",
-        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable\\test.jpg"
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_makanan4.jpg.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\makanan4.jpg"
     },
     {
-        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_second.xml.flat",
-        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\activity_second.xml"
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_rectangle.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\rectangle.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_signup.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout-land\\activity_signup.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\menu\\bottom_nav.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_details_recipe.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\activity_details_recipe.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_edit_round.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable\\edit_round.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_indicator_circle.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\indicator_circle.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_menu_login.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\activity_menu_login.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_makanan5.jpg.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\makanan5.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_find_recipe.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\activity_find_recipe.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_bg_indicator.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\bg_indicator.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_book_black_24dp.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\ic_book_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background2.jpg.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable\\background2.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_image_slider_1.webp.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\image_slider_1.webp"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_makanan1.jpeg.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\makanan1.jpeg"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_recipe_list.xml.flat",
         "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\activity_recipe_list.xml"
     },
     {
-        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_my__recipee.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\activity_my__recipee.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_top.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\fragment_top.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background.jpg.flat",
@@ -76,19 +172,39 @@
         "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_recipe_list_item.xml.flat",
-        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\recipe_list_item.xml"
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_nextbutton.PNG.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable\\nextbutton.PNG"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_slider_item.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\fragment_slider_item.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_welcome.png.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable\\welcome.png"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_makanan2.jpg.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\makanan2.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_second.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\activity_second.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_test.jpg.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable\\test.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_button.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable\\shape_button.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_nav_item_color_state.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\nav_item_color_state.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_about_us.xml.flat",
         "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\activity_about_us.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_signup.xml.flat",
-        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout-land\\activity_signup.xml"
-    },
-    {
-        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_about_us.png.flat",
-        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable\\about_us.png"
     }
 ]

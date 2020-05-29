@@ -2,14 +2,14 @@ package com.example.projectmobile;
 
 public class Recipe {
     private String name;
-    private String asal;
+    private String ingredients;
 
     public Recipe() {
     }
 
-    public Recipe(String name, String asal) {
+    public Recipe(String name, String ingredients) {
         this.name = name;
-        this.asal = asal;
+        this.ingredients = ingredients;
     }
 
     public String getName() {
@@ -20,11 +20,11 @@ public class Recipe {
         this.name = name;
     }
 
-    public String getAsal() {
-        return asal;
+    public String getIngredients() {
+        return ingredients;
     }
 
-    public void setAsal(String asal) {
-        this.asal = asal;
+    public void setIngredients(String ingredients) {
+        this.ingredients = ingredients;
     }
 }

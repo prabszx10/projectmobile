@@ -9,9 +9,12 @@
         android:label="MASAK KUY"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".about_us"></activity>
+        <activity android:name=".homeFragment"></activity>
+        <activity android:name=".DetailsRecipe" />
+        <activity android:name=".DisplayRecipe" />
+        <activity android:name=".My_Recipee" />
+        <activity android:name=".about_us" />
         <activity android:name=".Menu_login" />
-        <activity android:name=".FindRecipe" />
         <activity android:name=".Signup" />
         <activity android:name=".SecondActivity" />
         <activity android:name=".MainActivity">

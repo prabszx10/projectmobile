@@ -1,4 +1,4 @@
-#Fri May 22 04:53:35 ICT 2020
+#Fri May 29 21:29:45 ICT 2020
 base.0=D\:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

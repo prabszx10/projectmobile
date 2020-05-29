@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
-    Button next;
+    Button next, button;
     TextView skip;
 
     @Override
@@ -20,11 +20,18 @@ public class MainActivity extends AppCompatActivity {
 
         skip = findViewById(R.id.skip);
         next = findViewById(R.id.next);
-
+        button= findViewById(R.id.button2);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(MainActivity.this, DisplayRecipe.class);
+                startActivity(intent);
+            }
+        });
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(MainActivity.this, about_us.class);
+                Intent intent= new Intent(MainActivity.this, My_Recipee.class);
                 startActivity(intent);
             }
         });

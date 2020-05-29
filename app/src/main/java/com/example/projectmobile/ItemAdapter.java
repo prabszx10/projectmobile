@@ -1,0 +1,71 @@
+package com.example.projectmobile;
+
+import android.content.Context;
+import android.content.Intent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.database.DatabaseReference;
+
+
+import java.util.List;
+
+
+public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
+    private Context context;
+    private List<RecipeInput> items;
+    View v;
+
+    public ItemAdapter(List<RecipeInput> items){
+        this.items=items;
+    }
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item,parent,false);
+        return new ItemAdapter.ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+
+        final RecipeInput item =items.get(position);
+        holder.dis_name.setText(item.name);
+        holder.dis_step.setText(item.step);
+        holder.dis_id.setText(item.id);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(v.getContext(), DetailsRecipe.class);
+                intent.putExtra("keys",item.getId().toString());
+                v.getContext().startActivity(intent);
+            }
+        });
+
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return items.size();
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        private TextView dis_name,dis_step,dis_id;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            dis_name= itemView.findViewById(R.id.dis_name);
+            dis_step =itemView.findViewById(R.id.dis_step);
+            dis_id =itemView.findViewById(R.id.dis_id);
+        }
+    }
+
+
+}
