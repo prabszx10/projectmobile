@@ -38,7 +38,6 @@ public class Signup extends AppCompatActivity {
         signup = findViewById(R.id.signup);
 
         fAuth = FirebaseAuth.getInstance();
-        pb = findViewById(R.id.pb);
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,10 +60,11 @@ public class Signup extends AppCompatActivity {
                     password.setError("Password Must be atleast six character");
                 }
                 if(passwordd != repasswordd){
-                    reenter.setError("Password Must be atleast six character");
+                    reenter.setError("Use The same Password");
+                    password.setError("Use The same Password");
                 }
 
-                pb.setVisibility(View.VISIBLE);
+                else{
                 fAuth.createUserWithEmailAndPassword(usernamee,passwordd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -77,7 +77,7 @@ public class Signup extends AppCompatActivity {
                     }
                     }
                 });
-            }
+            }}
         });
     }
 }

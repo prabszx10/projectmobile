@@ -1389,6 +1389,7 @@ drawable edit_round
 drawable find_icon
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable hint_password
 drawable home_icon
 drawable ic_account_circle_black_24dp
 drawable ic_book_black_24dp
@@ -1408,6 +1409,7 @@ drawable ic_mtrl_chip_close_circle
 drawable image_slider_1
 drawable indicator_circle
 drawable landsback
+drawable login_background
 drawable logo2
 drawable makanan1
 drawable makanan2
@@ -1441,6 +1443,9 @@ drawable notify_panel_notification_icon_bg
 drawable profile
 drawable rectangle
 drawable round
+drawable round_button
+drawable round_column
+drawable round_column_border
 drawable shape_button
 drawable test
 drawable test_custom_background
@@ -1448,6 +1453,9 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable trophy_icon
 drawable welcome
+font corp_bold
+font corp_light
+font delvon_demo
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -1600,7 +1608,6 @@ id idName
 id ifRoom
 id image
 id imageView
-id imageView11
 id imageView3
 id imageView4
 id img
@@ -1673,7 +1680,6 @@ id parentPanel
 id parent_matrix
 id password
 id password_toggle
-id pb
 id peekHeight
 id percent
 id phone
@@ -1683,6 +1689,7 @@ id progress_horizontal
 id radio
 id recycleView
 id reenter
+id reenter2
 id right
 id right_icon
 id right_side
@@ -1757,8 +1764,13 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
+id textView10
 id textView2
 id textView3
+id textView4
+id textView5
+id textView7
+id textView9
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter

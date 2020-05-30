@@ -74,7 +74,7 @@ public class Menu_login extends AppCompatActivity {
                             startActivity(i);
                         }
                         else {
-                            Toast.makeText(Menu_login.this, "Error" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            display.setText("username or password is incorrect");
                         }
                     }
                 });

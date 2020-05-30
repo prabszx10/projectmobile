@@ -20,6 +20,18 @@
         "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\activity_signup.xml"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\font_delvon_demo.ttf.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\font\\delvon_demo.ttf"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\font_corp_light.otf.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\font\\corp_light.otf"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_column.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\round_column.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_read_recipe.xml.flat",
         "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\activity_read_recipe.xml"
     },
@@ -84,6 +96,10 @@
         "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\menu\\options_menu.xml"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_column_border.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\round_column_border.xml"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_main.xml.flat",
         "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout-land\\activity_main.xml"
     },
@@ -102,6 +118,10 @@
     {
         "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_signup.xml.flat",
         "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout-land\\activity_signup.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_login_background.png.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\login_background.png"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav.xml.flat",
@@ -176,8 +196,16 @@
         "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable\\nextbutton.PNG"
     },
     {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\font_corp_bold.otf.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\font\\corp_bold.otf"
+    },
+    {
         "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_slider_item.xml.flat",
         "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\layout\\fragment_slider_item.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_round_button.xml.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\round_button.xml"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable_welcome.png.flat",
@@ -186,6 +214,10 @@
     {
         "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_makanan2.jpg.flat",
         "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\makanan2.jpg"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_hint_password.png.flat",
+        "source": "D:\\AndroidStudioProjects\\projectmobile\\app\\src\\main\\res\\drawable-v24\\hint_password.png"
     },
     {
         "merged": "D:\\AndroidStudioProjects\\projectmobile\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_second.xml.flat",

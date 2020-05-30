@@ -4,113 +4,176 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/login_background"
     tools:context=".MainActivity">
-
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="600dp"
-        android:layout_height="838dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/background" />
+        app:layout_constraintVertical_bias="0.029"
+        app:srcCompat="@drawable/logo2" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="66dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/delvon_demo"
+        android:text="Hi Welcome to Our App, Sign Up \nnow to use for free"
+        android:textColor="#0B0A0A"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/corp_light"
+        android:text="Username"
+        android:textColor="#000000"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/corp_light"
+        android:text="Password"
+        android:textColor="#000000"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/corp_light"
+        android:text="Re-enter Password"
+        android:textColor="#000000"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/corp_light"
+        android:text="E-mail"
+        android:textColor="#000000"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reenter" />
 
     <EditText
         android:id="@+id/username"
-        android:layout_width="309dp"
-        android:layout_height="58dp"
+        android:layout_width="350dp"
+        android:layout_height="38dp"
+        android:background="@drawable/round_column_border"
         android:ems="10"
-        android:hint="Username"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/corp_light"
+        android:hint="username"
+        android:inputType="textPersonName"
+        android:scrollbarDefaultDelayBeforeFade="400"
+        android:textAlignment="center"
+        android:textColorHint="#6E6969"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.372"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.108" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="308dp"
-        android:layout_height="58dp"
+        android:layout_width="350dp"
+        android:layout_height="38dp"
+        android:background="@drawable/round_column_border"
         android:ems="10"
-        android:hint="Password"
+        android:fontFamily="@font/corp_light"
+        android:hint="password"
+
         android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:scrollbarDefaultDelayBeforeFade="400"
+        android:textAlignment="center"
+        android:textColorHint="#6E6969"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.372"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.223" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <EditText
         android:id="@+id/reenter"
-        android:layout_width="308dp"
-        android:layout_height="58dp"
+        android:layout_width="350dp"
+        android:layout_height="38dp"
+        android:background="@drawable/round_column_border"
         android:ems="10"
-        android:hint="Confirm Password"
+
+        android:fontFamily="@font/corp_light"
+        android:hint="re-enter password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:scrollbarDefaultDelayBeforeFade="400"
+        android:textAlignment="center"
+        android:textColorHint="#6E6969"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.372"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.328" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <EditText
-        android:id="@+id/email"
-        android:layout_width="308dp"
-        android:layout_height="58dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.442" />
+        android:id="@+id/reenter2"
+        android:layout_width="350dp"
+        android:layout_height="38dp"
+        android:background="@drawable/round_column_border"
 
-    <EditText
-        android:id="@+id/phone"
-        android:layout_width="308dp"
-        android:layout_height="58dp"
         android:ems="10"
-        android:hint="Phone"
-        android:inputType="phone"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/corp_light"
+        android:hint="E-mail"
+        android:inputType="textPassword"
+        android:scrollbarDefaultDelayBeforeFade="400"
+        android:textAlignment="center"
+        android:textColorHint="#6E6969"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.372"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.566" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <Button
         android:id="@+id/signup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Done"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.724" />
+        android:layout_width="175dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_button"
+        android:fontFamily="sans-serif-black"
 
-    <ProgressBar
-        android:id="@+id/pb"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        android:text="Sing UP !!"
+        android:textColor="#FDFCFC"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.926"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/reenter2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
