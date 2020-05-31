@@ -24,14 +24,14 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(MainActivity.this, DisplayRecipe.class);
+                Intent intent= new Intent(MainActivity.this, My_Recipee.class);
                 startActivity(intent);
             }
         });
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(MainActivity.this, My_Recipee.class);
+                Intent intent= new Intent(MainActivity.this,about_us.class );
                 startActivity(intent);
             }
         });

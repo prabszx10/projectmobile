@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".myAccountFragment"
+    android:orientation="vertical"
+    android:background="@drawable/background7">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/background1"
+        android:layout_above="@+id/layout_bawah" >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="173dp"
+            android:layout_height="150dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="121dp"
+            android:layout_marginBottom="41dp"
+            android:src="@drawable/ic_account_circle_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="119dp"
+            android:layout_marginBottom="18dp"
+            android:text="Muhammad Bima Al Fayyadl"
+            android:textColor="#000" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_bawah"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_edit"
+            android:paddingLeft="10dp"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/background22"
+            android:text="Edit Profile"
+            android:textAlignment="textStart"/>
+
+        <Button
+            android:id="@+id/button_dm"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/background3"
+            android:text="Direct Message"
+            android:textAlignment="textStart"/>
+
+        <Button
+            android:id="@+id/button_pp"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/background4"
+            android:text="Privacy &amp; Policy"
+            android:textAlignment="textStart"/>
+
+        <Button
+            android:id="@+id/button_help"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Help"
+            android:background="@drawable/background5"
+            android:textAlignment="textStart"/>
+
+        <Button
+            android:id="@+id/button_out"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="Sign Out"
+            android:textSize="18dp"
+            android:background="#fff"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>

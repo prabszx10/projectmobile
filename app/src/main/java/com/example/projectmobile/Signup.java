@@ -1,28 +1,32 @@
 package com.example.projectmobile;
 
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.Manifest;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class Signup extends AppCompatActivity {
-    EditText username,password,reenter,email,phone;
+    EditText username,password,reenter,emaill;
     Button signup;
-    FirebaseAuth fAuth;
-    ProgressBar pb;
+    FirebaseDatabase database;
+    DatabaseReference reference;
 
 
     @Override
@@ -33,50 +37,82 @@ public class Signup extends AppCompatActivity {
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         reenter = findViewById(R.id.reenter);
-        email = findViewById(R.id.email);
-        phone = findViewById(R.id.phone);
+        emaill = findViewById(R.id.email);
         signup = findViewById(R.id.signup);
 
-        fAuth = FirebaseAuth.getInstance();
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String usernamee = username.getText().toString().trim();
-                String passwordd = password.getText().toString().trim();
-                String repasswordd = reenter.getText().toString().trim();
+                database= FirebaseDatabase.getInstance();
+                reference= database.getReference("user");
+                final String usernamee = username.getText().toString();
+                final String passwordd = password.getText().toString();
+                final String repasswordd = reenter.getText().toString();
+                final String email = emaill.getText().toString();
+                String nowhiteSpace= "\\A\\w{4,20}\\z";
 
-                if(TextUtils.isEmpty(usernamee)){
-                    username.setError("Username Is Required");
-                    return;
+                if (usernamee.isEmpty()||passwordd.isEmpty()||repasswordd.isEmpty()||email.isEmpty()){
+                    new SweetAlertDialog(Signup.this, SweetAlertDialog.ERROR_TYPE).setTitleText("Field cannot be empty").show();
+                }
+                else if(usernamee.length()>= 15){
+                    new SweetAlertDialog(Signup.this, SweetAlertDialog.ERROR_TYPE).setTitleText("Username must be less than 15 character").show();
                 }
 
-                if(TextUtils.isEmpty(passwordd)){
-                    password.setError("password Is Required");
-                    return;
+                else if(!passwordd.equals(repasswordd)){
+                    new SweetAlertDialog(Signup.this, SweetAlertDialog.ERROR_TYPE).setTitleText("Please enter the same password").show();
+                    password.setError("Use the same password");
+                    reenter.setError("Use the same password");
                 }
 
-                if(passwordd.length()<6){
-                    password.setError("Password Must be atleast six character");
-                }
-                if(passwordd != repasswordd){
-                    reenter.setError("Use The same Password");
-                    password.setError("Use The same Password");
+                else if(password.length()<=6){
+                    new SweetAlertDialog(Signup.this, SweetAlertDialog.ERROR_TYPE).setTitleText("Password Must use atleast 6 character ").show();
                 }
 
-                else{
-                fAuth.createUserWithEmailAndPassword(usernamee,passwordd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                    if(task.isSuccessful()){
-                        Toast.makeText(Signup.this , "User Created", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                    }
-                    else {
-                        Toast.makeText(Signup.this, "Error" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                    }
-                });
+                else {
+                    final Loading_PopUp loading_popUp= new Loading_PopUp(Signup.this);
+                    loading_popUp.startLoadingDialog();
+
+                    final String userUsername= username.getText().toString().trim();
+
+                    final DatabaseReference reference = FirebaseDatabase.getInstance().getReference("user");
+                    Query checkUser = reference.orderByChild("username").equalTo(userUsername);
+
+                    checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if(dataSnapshot.exists()){
+                                Handler handler= new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        loading_popUp.dissmissDialog();
+                                    }
+                                },0);
+                                new SweetAlertDialog(Signup.this, SweetAlertDialog.ERROR_TYPE).setTitleText("Username has been used").show();
+                            }
+                            else{
+                                UserHelper user= new UserHelper(usernamee, passwordd,repasswordd,email);
+                                reference.child(usernamee).setValue(user);
+                                Handler handler= new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        loading_popUp.dissmissDialog();
+                                    }
+                                },0);
+                                Intent i= new Intent(Signup.this,Menu_login.class);
+                                startActivity(i);
+                                Toast.makeText(getApplicationContext(),"Successfully added data", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+
             }}
         });
     }

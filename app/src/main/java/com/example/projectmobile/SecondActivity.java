@@ -42,9 +42,13 @@ public class SecondActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.home:
                     loadFragment(new homeFragment());
+                    finish();
                     return true;
                 case R.id.top:
                     loadFragment(new topFragment());
+                    return true;
+                case R.id.my_account:
+                    loadFragment(new myAccountFragment());
                     return true;
             }
             return false;

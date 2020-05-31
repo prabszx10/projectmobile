@@ -143,15 +143,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <EditText
-        android:id="@+id/reenter2"
+        android:id="@+id/email"
         android:layout_width="350dp"
         android:layout_height="38dp"
         android:background="@drawable/round_column_border"
-
+        android:inputType="textEmailAddress"
         android:ems="10"
         android:fontFamily="@font/corp_light"
         android:hint="E-mail"
-        android:inputType="textPassword"
         android:scrollbarDefaultDelayBeforeFade="400"
         android:textAlignment="center"
         android:textColorHint="#6E6969"
@@ -173,7 +172,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.926"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reenter2" />
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

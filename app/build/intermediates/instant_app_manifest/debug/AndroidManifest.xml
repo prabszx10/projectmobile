@@ -25,8 +25,12 @@
         android:icon="@drawable/logo2"
         android:label="MASAK KUY"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.projectmobile.Loading_PopUp" />
+        <activity android:name="com.example.projectmobile.helpActivity" />
+        <activity android:name="com.example.projectmobile.ppActivity" />
+        <activity android:name="com.example.projectmobile.dmActivity" />
+        <activity android:name="com.example.projectmobile.accountEditActivity" />
         <activity android:name="com.example.projectmobile.homeFragment" />
         <activity android:name="com.example.projectmobile.DetailsRecipe" />
         <activity android:name="com.example.projectmobile.DisplayRecipe" />

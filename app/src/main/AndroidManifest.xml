@@ -5,12 +5,17 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:icon="@drawable/logo2"
         android:allowBackup="true"
+        android:icon="@drawable/logo2"
         android:label="MASAK KUY"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".homeFragment"></activity>
+        <activity android:name=".Loading_PopUp"></activity>
+        <activity android:name=".helpActivity" />
+        <activity android:name=".ppActivity" />
+        <activity android:name=".dmActivity" />
+        <activity android:name=".accountEditActivity" />
+        <activity android:name=".homeFragment" />
         <activity android:name=".DetailsRecipe" />
         <activity android:name=".DisplayRecipe" />
         <activity android:name=".My_Recipee" />
