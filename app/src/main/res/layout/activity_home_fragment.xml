@@ -8,61 +8,77 @@
     android:background="@drawable/bg_mobile_4"
     tools:context=".MainActivity">
 
-    <SearchView
-        android:id="@+id/sv_location"
+
+    <EditText
+
+        android:id="@+id/searchRecipe"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:hint="  Search Recipes..."
+       android:textAlignment="center"
+        android:textSize="17dp"
         android:background="@drawable/bg_round"
         android:elevation="5dp"
         android:iconifiedByDefault="false"
-        android:queryHint="Find Recipes"
+        android:queryHint="Find Recipes.."
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ScrollView
+
+
+    <FrameLayout
+        android:id="@+id/sliderView1"
+        android:background="#ff700d"
+        android:padding="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+
+        <com.example.projectmobile._sliders.SliderView
+            android:id="@+id/sliderView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <RelativeLayout
+            android:id="@+id/layout_top"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="220dp">
 
-            <RelativeLayout
-                android:id="@+id/layout_top"
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="220dp">
+                android:layout_height="match_parent" />
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/pagesContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" />
 
-                    <com.example.projectmobile._sliders.SliderView
-                        android:id="@+id/sliderView"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
-                </FrameLayout>
+        </RelativeLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <LinearLayout
-                    android:id="@+id/pagesContainer"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_gravity="bottom"
-                    android:layout_marginBottom="8dp"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal"/>
-
-            </RelativeLayout>
-
+        <ScrollView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            >
             <LinearLayout
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:orientation="vertical"
                 android:layout_marginTop="220dp"
                 android:padding="10dp"
+                android:paddingBottom="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <androidx.recyclerview.widget.RecyclerView
@@ -72,8 +88,35 @@
                 </androidx.recyclerview.widget.RecyclerView>
 
             </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
 
-        </RelativeLayout>
-    </ScrollView>
+    <LinearLayout
+        android:id="@+id/searchVisible"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchRecipe"
+        android:background="@drawable/curve"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/noResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Result Found"
+            />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginBottom="15dp"
+            android:id="@+id/recycleView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
 </RelativeLayout>

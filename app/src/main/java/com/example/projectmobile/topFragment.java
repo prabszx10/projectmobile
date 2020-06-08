@@ -1,64 +1,107 @@
 package com.example.projectmobile;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link topFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+import java.util.List;
+
 public class topFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private Button mButton1, mButton2;
+    private RecyclerView recyclerView, recyclerView1;
+    private ItemAdapter adapter;
+    private List<Internasional> items;
+    private Itemlocal adapterlocal;
+    private ItemInternasional adapterint;
+    private List<Local> items1;
+    private DatabaseReference reference, reference2;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public topFragment() {
         // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment topFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static topFragment newInstance(String param1, String param2) {
-        topFragment fragment = new topFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_top, container, false);
+        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_top, container, false);
+        recyclerView = root.findViewById(R.id.recycleint);
+        recyclerView1 = root.findViewById(R.id.recyclelocal);
+        recyclerView.setHasFixedSize(true);
+        recyclerView1.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
+        RecyclerView.LayoutManager layoutManager1 = new LinearLayoutManager(getContext());
+        recyclerView1.setLayoutManager(layoutManager1);
+        items = new ArrayList<>();
+        items1 = new ArrayList<>();
+        displaylocal();
+        displayint();
+
+        return root;
+    }
+
+    private void displayint() {
+        reference = FirebaseDatabase.getInstance().getReference("topinternasional");
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                items.clear();
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    Internasional internasional = snapshot.getValue(Internasional.class);
+                    items.add(internasional);
+                }
+                adapterint = new ItemInternasional(items);
+                recyclerView.setAdapter(adapterint);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    private void displaylocal() {
+        reference2 = FirebaseDatabase.getInstance().getReference("toplocal");
+        reference2.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                items1.clear();
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    Local local = snapshot.getValue(Local.class);
+                    items1.add(local);
+                }
+                adapterlocal = new Itemlocal(items1);
+                recyclerView1.setAdapter(adapterlocal);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+
     }
 }

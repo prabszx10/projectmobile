@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.projectmobile">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -10,7 +11,19 @@
         android:label="MASAK KUY"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Loading_PopUp"></activity>
+        <activity android:name=".DetailRecipeOfMine"></activity>
+        <activity android:name=".about_us2" />
+        <activity android:name=".SplashScreen" />
+        <activity android:name=".Jwb7" />
+        <activity android:name=".Jwb6" />
+        <activity android:name=".Jwb5" />
+        <activity android:name=".Jwb4" />
+        <activity android:name=".Jwb3" />
+        <activity android:name=".Jwb2" />
+        <activity android:name=".Jwb1" />
+        <activity android:name=".DetailInternasional" />
+        <activity android:name=".DetailLocal" />
+        <activity android:name=".Loading_PopUp" />
         <activity android:name=".helpActivity" />
         <activity android:name=".ppActivity" />
         <activity android:name=".dmActivity" />

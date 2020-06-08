@@ -1,5 +1,6 @@
 package com.example.projectmobile._sliders;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,11 +37,13 @@ public class FragmentSlider extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         imageUrls = getArguments().getString(ARG_PARAM1);
+
+        Uri uri = Uri.parse("android.resource://com.example.projectmobile/drawable/"+imageUrls);
         View view = inflater.inflate(R.layout.fragment_slider_item, container, false);
         ImageView img = (ImageView) view.findViewById(R.id.img);
         Glide.with(getActivity())
-                .load(imageUrls)
-                .placeholder(R.drawable.image_slider_1)
+                .load(uri)
+                .placeholder(R.drawable.img1)
                 .into(img);
         return view;
     }

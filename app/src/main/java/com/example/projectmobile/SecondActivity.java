@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -18,7 +19,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class SecondActivity extends AppCompatActivity {
-
+    String usernameedit,fullnameedit, passwordedit,emailedit;
     private ActionBar toolbar;
     ArrayAdapter<String> arrayAdapter;
 
@@ -32,6 +33,11 @@ public class SecondActivity extends AppCompatActivity {
         BottomNavigationView navigation = findViewById(R.id.navigationView);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
+        usernameedit =getIntent().getStringExtra("usernameedit");
+        fullnameedit =getIntent().getStringExtra("fullnameedit");
+        passwordedit =getIntent().getStringExtra("passwordedit");
+        emailedit =getIntent().getStringExtra("emailedit");
+
         loadFragment(new homeFragment());
     }
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -42,13 +48,16 @@ public class SecondActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.home:
                     loadFragment(new homeFragment());
-                    finish();
                     return true;
                 case R.id.top:
                     loadFragment(new topFragment());
                     return true;
+                case R.id.my_recipes:
+                    loadFragment(new myRecipesFragment());
+                    return true;
                 case R.id.my_account:
                     loadFragment(new myAccountFragment());
+
                     return true;
             }
             return false;

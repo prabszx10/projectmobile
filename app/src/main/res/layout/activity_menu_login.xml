@@ -36,7 +36,6 @@
         android:textColorHint="#6E6969"
         android:background="@drawable/round_column"
         android:ems="10"
-
         android:hint="password"
         android:inputType="textPassword"
         android:scrollbarDefaultDelayBeforeFade="400"

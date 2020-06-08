@@ -7,4 +7,19 @@
     tools:context=".about_us"
     android:background="@drawable/about_us">
 
+    <Button
+        android:id="@+id/aboutus"
+        android:layout_width="95dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/aboutusv2"
+        android:fontFamily="@font/corp_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="N E X T"
+        />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

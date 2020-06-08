@@ -7,6 +7,8 @@ import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
+
 public class Loading_PopUp extends AppCompatActivity {
 
     Activity activity;
@@ -21,7 +23,10 @@ public class Loading_PopUp extends AppCompatActivity {
 
         LayoutInflater inflater= activity.getLayoutInflater();
         builder.setView(inflater.inflate(R.layout.activity_loading__pop_up, null));
-        builder.setCancelable(false);
+
+        if(builder.setCancelable(true).equals(builder.setCancelable(true))){
+
+        }
 
         dialog = builder.create();
         dialog.show();

@@ -5,13 +5,13 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.firebase.database.DatabaseReference;
-
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -36,9 +36,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
         final RecipeInput item =items.get(position);
         holder.dis_name.setText(item.name);
-        holder.dis_step.setText(item.step);
-        holder.dis_id.setText(item.id);
-
+        holder.dis_publishBy.setText("Published By: "+item.username);
+        Picasso.get().load(item.recipeimage).into(holder.imageFood1);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,17 +52,18 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
+
         return items.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView dis_name,dis_step,dis_id;
-
+        private TextView dis_name, dis_publishBy;
+        private ImageView imageFood1;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             dis_name= itemView.findViewById(R.id.dis_name);
-            dis_step =itemView.findViewById(R.id.dis_step);
-            dis_id =itemView.findViewById(R.id.dis_id);
+            dis_publishBy =itemView.findViewById(R.id.dis_publishBy);
+            imageFood1= itemView.findViewById(R.id.imageFood1);
         }
     }
 

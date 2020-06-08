@@ -3,7 +3,12 @@ package com.example.projectmobile;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.app.FragmentManager;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
@@ -37,12 +42,10 @@ public class Menu_login extends AppCompatActivity {
         username =(EditText)findViewById(R.id.username);
         password= (EditText)findViewById(R.id.password);
         loginBUtton= (Button)findViewById(R.id.loginButton);
-        display= (TextView)findViewById(R.id.display);
         signup=(TextView)findViewById(R.id.signup);
 
         username.setText("");
         password.setText("");
-
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,33 +58,35 @@ public class Menu_login extends AppCompatActivity {
         loginBUtton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String usernamee= username.getText().toString();
-                String passwordd= password.getText().toString();
+                String usernamee = username.getText().toString();
+                String passwordd = password.getText().toString();
 
-                if(usernamee.isEmpty()&&passwordd.isEmpty()){
-                    new SweetAlertDialog(Menu_login.this, SweetAlertDialog.ERROR_TYPE).setTitleText("Username and Password must be filled").show();
-                    username.setError("Field cannot be empty");
-                    password.setError("Field cannot be empty");
-                }
+                if (!isConnected()) {
+                    new SweetAlertDialog(Menu_login.this, SweetAlertDialog.ERROR_TYPE).setTitleText("no internet connection").show();
+                } else {
+                    if (usernamee.isEmpty() && passwordd.isEmpty()) {
+                        new SweetAlertDialog(Menu_login.this, SweetAlertDialog.ERROR_TYPE).setTitleText("Username and Password must be filled").show();
+                        username.setError("Field cannot be empty");
+                        password.setError("Field cannot be empty");
+                    } else if (usernamee.isEmpty()) {
+                        new SweetAlertDialog(Menu_login.this, SweetAlertDialog.ERROR_TYPE).setTitleText("Username must be filled").show();
+                        username.setError("Field cannot be empty");
+                    } else if (passwordd.isEmpty()) {
+                        new SweetAlertDialog(Menu_login.this, SweetAlertDialog.ERROR_TYPE).setTitleText("Password must be filled").show();
+                        password.setError("Field cannot be empty");
+                    } else {
 
-                else if(usernamee.isEmpty()){
-                    new SweetAlertDialog(Menu_login.this, SweetAlertDialog.ERROR_TYPE).setTitleText("Username must be filled").show();
-                    username.setError("Field cannot be empty");
-                }
-                else if(passwordd.isEmpty()){
-                    new SweetAlertDialog(Menu_login.this, SweetAlertDialog.ERROR_TYPE).setTitleText("Password must be filled").show();
-                    password.setError("Field cannot be empty");
-                }
-                else{
-
-                    isUser();
+                        isUser();
+                    }
                 }
             }
         });
     }
-
-
-
+    private boolean isConnected(){
+        ConnectivityManager connectivityManager=(ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo=connectivityManager.getActiveNetworkInfo();
+        return  networkInfo !=null && networkInfo.isConnected();
+    }
 
     private void isUser() {
         final Loading_PopUp loading_popUp= new Loading_PopUp(Menu_login.this);
@@ -91,10 +96,7 @@ public class Menu_login extends AppCompatActivity {
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("user");
         Query checkUser = reference.orderByChild("username").equalTo(userUsername);
-
         checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
-
-
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
@@ -102,7 +104,17 @@ public class Menu_login extends AppCompatActivity {
                     String passwordDb = dataSnapshot.child(userUsername).child("password").getValue(String.class);
                     if(passwordDb.equals(userPassword)){
 
-                        Intent i= new Intent(Menu_login.this,SecondActivity.class);
+                        String usernameDB=dataSnapshot.child(userUsername).child("username").getValue(String.class);
+                        String fullnameDB=dataSnapshot.child(userUsername).child("fullname").getValue(String.class);
+                        String passwordDB=dataSnapshot.child(userUsername).child("password").getValue(String.class);
+                        String emailDB=dataSnapshot.child(userUsername).child("email").getValue(String.class);
+
+                        Intent i= new Intent(Menu_login.this,SplashScreen.class);
+                        i.putExtra("usernameedit",usernameDB);
+                        i.putExtra("fullnameedit",fullnameDB);
+                        i.putExtra("passwordedit",passwordDB);
+                        i.putExtra("emailedit",emailDB);
+                        Intent in= new Intent(Menu_login.this,SplashScreen.class);
                         startActivity(i);
                         finish();
                         Handler handler= new Handler();
@@ -139,6 +151,8 @@ public class Menu_login extends AppCompatActivity {
                 }
 
             }
+
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {

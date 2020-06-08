@@ -90,6 +90,7 @@ attr alertDialogButtonGroupStyle
 attr alertDialogCenterButtons
 attr alertDialogStyle
 attr alertDialogTheme
+attr alignmentMode
 attr allowStacking
 attr alpha
 attr alphabeticModifiers
@@ -198,6 +199,10 @@ attr chipStrokeWidth
 attr chipStyle
 attr chipSurfaceColor
 attr circleCrop
+attr civ_border_color
+attr civ_border_overlay
+attr civ_border_width
+attr civ_circle_background_color
 attr closeIcon
 attr closeIconEnabled
 attr closeIconEndPadding
@@ -233,6 +238,8 @@ attr colorSecondary
 attr colorSecondaryVariant
 attr colorSurface
 attr colorSwitchThumbNormal
+attr columnCount
+attr columnOrderPreserved
 attr commitIcon
 attr constraintSet
 attr constraint_referenced_ids
@@ -426,6 +433,9 @@ attr layout_anchorGravity
 attr layout_behavior
 attr layout_collapseMode
 attr layout_collapseParallaxMultiplier
+attr layout_column
+attr layout_columnSpan
+attr layout_columnWeight
 attr layout_constrainedHeight
 attr layout_constrainedWidth
 attr layout_constraintBaseline_creator
@@ -476,9 +486,13 @@ attr layout_goneMarginLeft
 attr layout_goneMarginRight
 attr layout_goneMarginStart
 attr layout_goneMarginTop
+attr layout_gravity
 attr layout_insetEdge
 attr layout_keyline
 attr layout_optimizationLevel
+attr layout_row
+attr layout_rowSpan
+attr layout_rowWeight
 attr layout_scrollFlags
 attr layout_scrollInterpolator
 attr liftOnScroll
@@ -546,6 +560,7 @@ attr navigationMode
 attr navigationViewStyle
 attr number
 attr numericModifiers
+attr orientation
 attr overlapAnchor
 attr paddingBottomNoButtons
 attr paddingEnd
@@ -578,6 +593,8 @@ attr recyclerViewStyle
 attr reverseLayout
 attr rippleColor
 attr rollType
+attr rowCount
+attr rowOrderPreserved
 attr scopeUris
 attr scrimAnimationDuration
 attr scrimBackground
@@ -730,6 +747,7 @@ attr trackTint
 attr trackTintMode
 attr ttcIndex
 attr useCompatPadding
+attr useDefaultMargins
 attr useMaterialThemeColors
 attr viewInflaterClass
 attr voiceIcon
@@ -982,6 +1000,7 @@ color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
+color test2
 color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
 color text_color
@@ -1086,6 +1105,7 @@ dimen compat_notification_large_icon_max_height
 dimen compat_notification_large_icon_max_width
 dimen custom_image_size
 dimen default_dimension
+dimen default_gap
 dimen design_appbar_elevation
 dimen design_bottom_navigation_active_item_max_width
 dimen design_bottom_navigation_active_item_min_width
@@ -1409,6 +1429,8 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable about_us
+drawable aboutusv2
+drawable addbutton
 drawable avd_hide_password
 drawable avd_show_password
 drawable back
@@ -1420,9 +1442,14 @@ drawable background3
 drawable background4
 drawable background5
 drawable background7
+drawable background8
 drawable bg_indicator
+drawable bg_mobile_3
 drawable bg_mobile_4
 drawable bg_round
+drawable bg_round2
+drawable bg_siap
+drawable bgupdate
 drawable blue_button_background
 drawable bottom
 drawable btn_checkbox_checked_mtrl
@@ -1452,6 +1479,7 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable curve
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1471,6 +1499,7 @@ drawable green_button_background
 drawable hint_password
 drawable home_icon
 drawable ic_account_circle_black_24dp
+drawable ic_add_to_photos_black
 drawable ic_book_black_24dp
 drawable ic_calendar_black_24dp
 drawable ic_clear_black_24dp
@@ -1486,7 +1515,11 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable image_slider_1
+drawable img1
+drawable img2
+drawable img3
 drawable indicator_circle
+drawable judul_andre
 drawable landsback
 drawable login_background
 drawable logo2
@@ -1495,6 +1528,7 @@ drawable makanan2
 drawable makanan3
 drawable makanan4
 drawable makanan5
+drawable milk
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1523,19 +1557,26 @@ drawable profile
 drawable rectangle
 drawable red_button_background
 drawable round
+drawable round2
+drawable round3
 drawable round_button
 drawable round_column
 drawable round_column_border
+drawable roundhelp
 drawable shape_button
+drawable splash
+drawable splashcurve
 drawable success_bow
 drawable success_circle
 drawable test
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable topbackground
 drawable trophy_icon
 drawable warning_circle
 drawable warning_sigh
+drawable wbb
 drawable welcome
 font corp_bold
 font corp_light
@@ -1550,6 +1591,7 @@ id SHIFT
 id SYM
 id TOP_END
 id TOP_START
+id aboutus
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
 id accessibility_custom_action_1
@@ -1604,21 +1646,29 @@ id actions
 id activity_chooser_view_content
 id activity_main
 id add
+id addbutton
 id adjust_height
 id adjust_width
 id alertTitle
+id alignBounds
+id alignMargins
 id all
 id always
+id anotherquestion
 id async
+id atas
 id auto
+id backbutton
+id backint
+id backlcl
 id barrier
 id beginning
 id blocking
 id bottom
 id button
-id button2
 id buttonPanel
-id button_dm
+id button_aboutUs
+id button_cp
 id button_edit
 id button_help
 id button_out
@@ -1644,6 +1694,7 @@ id content
 id contentPanel
 id content_text
 id coordinator
+id cover
 id custom
 id customPanel
 id custom_image
@@ -1652,7 +1703,6 @@ id cut
 id dark
 id date_picker_actions
 id decor_content_parent
-id decya
 id default_activity_button
 id design_bottom_sheet
 id design_menu_item_action_area
@@ -1662,11 +1712,9 @@ id design_navigation_view
 id dialog_button
 id dimensions
 id direct
-id dis_id
 id dis_name
-id dis_step
+id dis_publishBy
 id disableHome
-id display
 id dropdown_menu
 id edit_query
 id email
@@ -1687,30 +1735,63 @@ id filter_chip
 id fitToContents
 id fixed
 id forever
+id fullname
+id gambar
+id gambar2
+id gambar3
+id gambar4
+id gambar5
+id gambarr
+id gambarr2
+id gambarr3
+id gambarr4
+id gambarr5
 id ghost_view
 id ghost_view_holder
 id glide_custom_view_target_tag
 id gone
 id group_divider
 id groups
+id helpback
 id hideable
 id home
 id homeAsUp
+id horizontal
 id icon
 id icon_group
 id icon_only
 id idName
 id ifRoom
 id image
+id imageBig
+id imageFood1
+id imageSmall
 id imageView
 id imageView3
 id imageView4
+id imageViewAdd
 id img
 id info
+id ingredients
+id inputImageName
 id invisible
 id isi
 id italic
 id item_touch_helper_previous_elevation
+id jwb1
+id jwb2
+id jwb3
+id jwb4
+id jwb5
+id jwb6
+id jwb7
+id kembali1
+id kembali2
+id kembali3
+id kembali4
+id kembali5
+id kembali6
+id kembali7
 id labeled
 id largeLabel
 id layout_bawah
@@ -1719,6 +1800,8 @@ id left
 id light
 id line1
 id line3
+id linearLayout
+id linearLayout2
 id listMode
 id list_item
 id loading
@@ -1758,11 +1841,13 @@ id mtrl_picker_title_text
 id multiply
 id my_account
 id my_recipes
+id namaResep
 id navigationView
 id navigation_header_container
 id neutral_button
 id never
 id next
+id noResult
 id noScroll
 id none
 id normal
@@ -1784,13 +1869,19 @@ id peekHeight
 id percent
 id phone
 id pin
+id profile_image
 id progressBar
 id progressWheel
 id progress_circular
 id progress_dialog
 id progress_horizontal
+id publisher
 id radio
 id recycleView
+id recycleView1
+id recycleint
+id recyclelocal
+id recycleview
 id reenter
 id right
 id right_icon
@@ -1806,6 +1897,8 @@ id scrollIndicatorUp
 id scrollView
 id scrollable
 id search
+id searchRecipe
+id searchVisible
 id search_badge
 id search_bar
 id search_button
@@ -1827,6 +1920,7 @@ id skip
 id skipCollapsed
 id slide
 id sliderView
+id sliderView1
 id smallLabel
 id snackbar_action
 id snackbar_text
@@ -1842,12 +1936,12 @@ id src_over
 id standard
 id start
 id step
+id steps
 id stretch
 id submenuarrow
 id submit_area
 id success_frame
 id success_tick
-id sv_location
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -1864,18 +1958,19 @@ id text
 id text2
 id textEnd
 id textInputLayout2
+id textInputLayout3
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
-id textView10
 id textView2
 id textView3
 id textView4
 id textView5
 id textView6
 id textView7
-id textView9
+id textView8
+id textViewProgress
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter
@@ -1900,6 +1995,8 @@ id unlabeled
 id up
 id useLogo
 id username
+id username1
+id vertical
 id view_offset_helper
 id visible
 id warning_frame
@@ -1972,22 +2069,35 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_about_us
+layout activity_about_us2
 layout activity_account_edit
+layout activity_detail_internasional
+layout activity_detail_local
+layout activity_detail_recipe_of_mine
 layout activity_details_recipe
 layout activity_display_recipe
 layout activity_dm
 layout activity_find_recipe
 layout activity_help
 layout activity_home_fragment
+layout activity_jwb1
+layout activity_jwb2
+layout activity_jwb3
+layout activity_jwb4
+layout activity_jwb5
+layout activity_jwb6
+layout activity_jwb7
 layout activity_loading__pop_up
 layout activity_main
 layout activity_menu_login
 layout activity_my__recipee
 layout activity_pp
 layout activity_read_recipe
-layout activity_recipe_list
 layout activity_second
 layout activity_signup
+layout activity_splash_screen
+layout activity_top_int
+layout activity_top_local2
 layout alert_dialog
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -2006,6 +2116,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_my_account
+layout fragment_my_recipes
 layout fragment_slider_item
 layout fragment_top
 layout list_item
@@ -2090,6 +2201,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string anotherquestion
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -2877,6 +2989,7 @@ styleable ButtonBarLayout allowStacking
 styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCornerRadius cardElevation cardMaxElevation cardPreventCornerOverlap cardUseCompatPadding contentPadding contentPaddingBottom contentPaddingLeft contentPaddingRight contentPaddingTop
 styleable Chip android_textAppearance android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical singleLine singleSelection
+styleable CircleImageView civ_border_color civ_border_overlay civ_border_width civ_circle_background_color
 styleable CollapsingToolbarLayout collapsedTitleGravity collapsedTitleTextAppearance contentScrim expandedTitleGravity expandedTitleMargin expandedTitleMarginBottom expandedTitleMarginEnd expandedTitleMarginStart expandedTitleMarginTop expandedTitleTextAppearance scrimAnimationDuration scrimVisibleHeightTrigger statusBarScrim title titleEnabled toolbarId
 styleable CollapsingToolbarLayout_Layout layout_collapseMode layout_collapseParallaxMultiplier
 styleable ColorStateListItem android_color android_alpha alpha
@@ -2897,6 +3010,8 @@ styleable FontFamilyFont android_font android_fontWeight android_fontStyle andro
 styleable ForegroundLinearLayout android_foreground android_foregroundGravity foregroundInsidePadding
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
+styleable GridLayout alignmentMode columnCount columnOrderPreserved orientation rowCount rowOrderPreserved useDefaultMargins
+styleable GridLayout_Layout android_layout_width android_layout_height android_layout_margin android_layout_marginLeft android_layout_marginTop android_layout_marginRight android_layout_marginBottom layout_column layout_columnSpan layout_columnWeight layout_gravity layout_row layout_rowSpan layout_rowWeight
 styleable LinearConstraintLayout android_orientation
 styleable LinearLayoutCompat android_gravity android_orientation android_baselineAligned android_baselineAlignedChildIndex android_weightSum divider dividerPadding measureWithLargestChild showDividers
 styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width android_layout_height android_layout_weight

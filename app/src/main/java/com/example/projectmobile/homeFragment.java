@@ -1,17 +1,25 @@
 package com.example.projectmobile;
 
-import android.content.Intent;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
 import com.example.projectmobile._sliders.FragmentSlider;
 import com.example.projectmobile._sliders.SliderIndicator;
 import com.example.projectmobile._sliders.SliderPagerAdapter;
@@ -20,10 +28,13 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -35,13 +46,15 @@ public class homeFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    private RecyclerView recyclerView;
+    private RecyclerView recyclerView,recyclerView1;
     private ItemAdapter adapter;
-    private List<RecipeInput> items;
+    private List<RecipeInput> items,items1;
     private DatabaseReference reference;
-
+    EditText searchRecipe;
+    TextView noResult;
     private String mParam1;
     private String mParam2;
+    LinearLayout linerlayout;
 
     private SliderPagerAdapter mAdapter;
     private SliderIndicator mIndicator;
@@ -60,6 +73,7 @@ public class homeFragment extends Fragment {
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+
     }
 
     @Override
@@ -102,24 +116,116 @@ public class homeFragment extends Fragment {
         sliderView = (SliderView) rootView.findViewById(R.id.sliderView);
         mLinearLayout = (LinearLayout) rootView.findViewById(R.id.pagesContainer);
         recyclerView= rootView.findViewById(R.id.recycleView);
+        recyclerView1= rootView.findViewById(R.id.recycleView1);
         recyclerView.setHasFixedSize(true);
+        recyclerView1.setHasFixedSize(true);
+        searchRecipe = rootView.findViewById(R.id.searchRecipe);
+        noResult= rootView.findViewById(R.id.noResult);
+        linerlayout = rootView.findViewById(R.id.searchVisible);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
+        RecyclerView.LayoutManager layoutManager1 = new LinearLayoutManager(getContext());
+        recyclerView1.setLayoutManager(layoutManager1);
+
 
         items = new ArrayList<>();
+        items1 = new ArrayList<>();
+        linerlayout.setVisibility(View.GONE);
+        setUpSliderOffline();
         DisplayData();
 
-        setupSlider();
+        searchRecipe.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-        return rootView;
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                filter(s.toString());
+            }
+        });
+            return rootView;
+    }
+
+
+    private void filter(String text) {
+        reference = FirebaseDatabase.getInstance().getReference("myrecipe");
+        final String namerecipe= searchRecipe.getText().toString().trim();
+        final String sensitivecase= text.toUpperCase();
+        final Query checkUser = reference.orderByChild("name").startAt(sensitivecase).endAt(sensitivecase+"\uf8ff");
+        final Query checkPublisher = reference.orderByChild("username").startAt(text).endAt(text+"\uf8ff");
+
+
+        if(!namerecipe.isEmpty()){
+            linerlayout.setVisibility(View.VISIBLE);
+
+            checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if(dataSnapshot.exists()){
+                        recyclerView1.setVisibility(View.VISIBLE);
+                        noResult.setVisibility(View.GONE);
+                        checkUser.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                items1.clear();
+                                for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+                                    RecipeInput recipeInput= snapshot.getValue(RecipeInput.class);
+                                    items1.add(recipeInput);
+                                }
+                                adapter= new ItemAdapter(items1);
+                                recyclerView1.setAdapter(adapter);
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                            }
+                        });
+                    }
+                    else {
+                        noResult.setVisibility(View.VISIBLE);
+                        recyclerView1.setVisibility(View.GONE);
+                        noResult.setText("No Result For "+searchRecipe.getText());
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });}
+        else {
+            linerlayout.setVisibility(View.GONE);
+        }
     }
 
     private void setupSlider() {
-        sliderView.setDurationScroll(800);
+
+        sliderView.setDurationScroll(1500);
         List<Fragment> fragments = new ArrayList<>();
-        fragments.add(FragmentSlider.newInstance("http://www.menucool.com/slider/prod/image-slider-1.jpg"));
-        fragments.add(FragmentSlider.newInstance("http://www.menucool.com/slider/prod/image-slider-2.jpg"));
-        fragments.add(FragmentSlider.newInstance("http://www.menucool.com/slider/prod/image-slider-3.jpg"));
+        fragments.add(FragmentSlider.newInstance("https://images.pexels.com/photos/3060255/pexels-photo-3060255.jpeg?cs=srgb&dl=makanan-gelap-kelam-hitam-3060255.jpg&fm=jpg"));
+        fragments.add(FragmentSlider.newInstance("https://images.pexels.com/photos/1266741/pexels-photo-1266741.jpeg?cs=srgb&dl=berair-beri-buah-fotografi-makanan-1266741.jpg&fm=jpg"));
+        fragments.add(FragmentSlider.newInstance("https://images.pexels.com/photos/3217151/pexels-photo-3217151.jpeg?cs=srgb&dl=minuman-kaca-lemon-rumahan-3217151.jpg&fm=jpg"));
+        mAdapter = new SliderPagerAdapter(getFragmentManager(), fragments);
+        sliderView.setAdapter(mAdapter);
+        mIndicator = new SliderIndicator(getActivity(), mLinearLayout, sliderView, R.drawable.indicator_circle);
+        mIndicator.setPageCount(fragments.size());
+        mIndicator.show();
+    }
+
+    private void setUpSliderOffline() {
+
+        List<Fragment> fragments = new ArrayList<>();
+        fragments.add(FragmentSlider.newInstance("img1"));
+        fragments.add(FragmentSlider.newInstance("img2"));
+        fragments.add(FragmentSlider.newInstance("img3"));
 
         mAdapter = new SliderPagerAdapter(getFragmentManager(), fragments);
         sliderView.setAdapter(mAdapter);
@@ -127,4 +233,5 @@ public class homeFragment extends Fragment {
         mIndicator.setPageCount(fragments.size());
         mIndicator.show();
     }
+
 }

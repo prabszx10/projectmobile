@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/kembali1"
+        android:layout_width="54dp"
+        android:layout_height="49dp"
+        android:background="@drawable/back" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_height="70dp"
+        android:text="MASAK KUY ??"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/design_default_color_on_secondary"/>
+
+
+
+
+        <LinearLayout
+            android:layout_marginTop="150dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:justificationMode="inter_word"
+                            android:fontFamily="@font/corp_light"
+                            android:textSize="20dp"
+                            android:text="\t\tMASAKKUY adalah aplikasi yang menyediakan resep-resep makanan atau pun minuman untuk membantu anda menemukan sejumlah ide dan tips-tips yang berkaitan dengan masakan. "
+                            android:textColor="#000" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:justificationMode="inter_word"
+                    android:fontFamily="@font/corp_light"
+                    android:textSize="20dp"
+                    android:text="\t\tFitur lebih dari app ini yaitu user dapat menambahkan resep baru dan user dapat mencari resep-resep yang diinginkan dengan mudah. Tentunya dengan petunjuk pembuatan masakan dan bahan-bahan yang dipaparkan dalam sebuah resep yang dikunjungi."
+                    android:textColor="#000" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/corp_bold"
+        android:text="© Masak Kuy 2020"
+        android:textAlignment="center"
+        android:textColor="#000000"/>
+
+
+
+</LinearLayout>

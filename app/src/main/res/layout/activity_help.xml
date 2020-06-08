@@ -1,9 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".helpActivity">
+    android:layout_height="match_parent"
+    tools:context=".myAccountFragment"
+    android:orientation="vertical"
+    android:background="@drawable/background7">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="123dp"
+        android:layout_above="@+id/layout_bawah"
+        android:background="@drawable/background1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:text="FAQ"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.774" />
+
+        <ImageButton
+            android:id="@+id/helpback"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_bawah"
+        android:layout_width="match_parent"
+        android:layout_height="602dp"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:paddingBottom="10dp">
+
+
+        <Button
+            android:id="@+id/jwb1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="0dp"
+            android:paddingLeft="10dp"
+            android:text="Apa itu masak kuy App??"
+            android:fontFamily="@font/corp_light"
+            android:background="@drawable/roundhelp"
+            android:textAlignment="center"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/jwb2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:text="Bagaimana cara mendapatkan rekomendasi resep??"
+            android:fontFamily="@font/corp_light"
+            android:background="@drawable/roundhelp"
+            android:textAlignment="center"
+            android:textSize="18dp" />
+
+
+        <Button
+
+            android:id="@+id/jwb3"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:text="Bagaimana cara mencari resep yang diinginkan??"
+            android:fontFamily="@font/corp_light"
+            android:background="@drawable/roundhelp"
+            android:textAlignment="center"
+            android:textSize="18dp" />
+
+
+        <Button
+
+            android:id="@+id/jwb4"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:text="Bagaimana cara mendaftar akun masakkuy??"
+            android:fontFamily="@font/corp_light"
+            android:background="@drawable/roundhelp"
+            android:textAlignment="center"
+            android:textSize="18dp" />
+
+        <Button
+
+            android:id="@+id/jwb5"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:text="Bagaimana saya bisa menambahkan resep baru untuk di upload??"
+            android:fontFamily="@font/corp_light"
+            android:background="@drawable/roundhelp"
+            android:textAlignment="center"
+            android:textSize="18dp" />
+
+        <Button
+
+            android:id="@+id/jwb6"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:text="Syarat dan ketentuan APP ini??"
+            android:fontFamily="@font/corp_light"
+            android:background="@drawable/roundhelp"
+            android:textAlignment="center"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/jwb7"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:text="dimana saya bisa mendapatkan kontak bantuan app ini??"
+            android:fontFamily="@font/corp_light"
+            android:background="@drawable/roundhelp"
+            android:textAlignment="center"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/anotherquestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#2196F3"
+            android:text="@string/anotherquestion"/>
+
+    </LinearLayout>
+
+</LinearLayout>

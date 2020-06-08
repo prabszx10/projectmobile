@@ -1,9 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ppActivity">
+    android:orientation="vertical"
+    android:background="@drawable/background7">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/backbutton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/back"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Privacy &amp; Policy"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+
+
+        <LinearLayout
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="@android:color/transparent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:justificationMode="inter_word"
+                            android:text="Selamat datang di halaman ketentuan pengguna MASAK KUY App. Ketentuan pengguna mobile App akan menjelaskan cara kami mengumpulkan, menggunakan, mengungkap dan melindungi berbagai informasi sehubungan dengan pengguna App ini.
+                                           \n\n1. KETENTUAN KEANGGOTAAN MASAK KUY APP
+                                           \n\n\nMasak Kuy App akan meminta informasi saat pengguna membuat akun MASAK KUY seperti username, email, dan nama pengguna.
+                                           \n\nJika pengguna menuliskan komentar atau melakukan share, maka APP ini akan menyimpan rekam aktivitas pengguna. Tujuannya untuk menambahkan wawasan MASAK KUY mengenai kecenderungan pengguna dan untuk menyesuaikan berbagai fitur yang ada di APP ini sesuai dengan kebutuhan.
+                                           \n\n2. KETENTUAN KOMUNIKASI KOMERSIAL DAN MARKETING
+                                           \n\nInformasi yang direkam oleh layanan APP kami digunakan untuk berkomunikasi langsung dengan para pengguna. Jenis informasi yang berkaitan dengan layanan tidak menyediakan pilihan bagi pengguna untuk tidak menggunakannya.
+                                           \n\n3. KETENTUAN SHARE INFORMASI
+                                           \n\nMASAK KUY tidak akan memberikan ataupun menjual informasi pengguna pada pihak manapun tanpa seizin pengguna akun tersebut.
+                                           \n\nPengguna dapat memilih membagikan konten pengguna dalam bentuk informasi yang memang dilampirkan pada layanan tertentu. Untuk menyesuaikan pengaturan pengguna layanan, dimohon agar pengguna menyesuaikan pengaturan profil. Informasi publik dapat dilacak dan ditemukan oleh pengguna lainnya.
+                                           \n\nPihak MASAK KUY juga berhak menjulal atau mengalihkan APP ini beserta saham-sahamnya, maupun kombinasi produk, layanan, aset dan/atau bisnis. Informasi pengguna seperti nama, alamat email dan informasi pengguna lainnya dapat termasuk dalam transaksi.
+                                           \n\nDalam ranah instansi yang mengharuskan adanya pengungkapan informasi pengguna, MASAK KUY akan mengungkap informasi sesuai kebutuhan menurut hukum yang berlaku, lindungan bagi keamanan, integritas layanan, dan/atau melatih atau melindungi hak, properti atau keamanan pribadi dari APP ini maupun pengguna dan lainnya.
+                                           \n\n4. KETENTUAN PENYIMPANAN DAN PERLINDUNGAN INFORMASI
+                                           \n\nPenyimpanan dan pengolahan data informasi dilakukan di Indonesia, di kota-kota tempat afilasi MASAK KUY berada. Informasi pengguna yang sudah terdaftar di dalam MASAK KUY dapat dibagikan ke afilasi MASAK KUY di wilayah lain di seluruh dunia yang mungkin memiliki batasan hukum yang berbeda.
+                                           \n\nMASAK KUY menggunakan cara pengamanan data informasi milik pengguna yang terkumpul melalui layanan. Untuk melindungi keamanan dan privasi pengguna, MASAK KUY mengambil langkah-langkah verifikasi identitas sebelum akses ke akun pribadi yang diberikan. Keamanan informasi akun yang sudah diteruskan oleh pengguna ke pihak lain tidak lagi menjadi tanggung jawab APP ini jika sampai terjadi gangguan jenis apapun. MASAK KUY juga tidak bertanggung jawab terhadap kebijakan keamanan yang melibatkan pihak ketiga seperti jaringan media sosial.
+                                           \n\nJika terjadi pelanggaran informasi yang berada di bawah pengawasan dan sistem keamanan MASAK KUY, maka MASAK KUY akan mengambil tindakan investigasi yang dibutuhkan serta mengadakan pemberitahuan terhadap pengguna sesuai etika dan peraturan.
+                                           \n\n5. KETENTUAN PRIVASI PENGGUNA DIBAWAH UMUR
+                                           \n\nMASAK KUY tidak mengambil informasi dari siapapun yang berusia dibawah umur atau dibawah usia 13 tahun maupun memberikan akses pada pengguna dibawah umur. Layanan dan konten MASAK KUY tidak ditujukan bagi pengguna dibawah usia 13 tahun. Jika terjadi pengumpulan informasi dari pengguna dibawah umur, maka MASAK KUY akan langsung menghapusnya. Silahkan hubungi kami jika pengguna menemukan adanya akun yang terdaftar dengan umur dibawah 13 tahun.
+                                           \n\n6. KETENTUAN TAUTAN KE SITUS DAN LAYANAN LAINNYA
+                                           \n\nMASAK KUY tidak bertanggung jawab terhadap tautan oleh situs atau layanan lainnya yang dihubungkan ke atau dari layanan, termasuk konten dan informasi yang ada di dalamnya. Mohon diperhatikan apabila pengguna masuk ke tautan lain dari layanan. Ketentuan pengguna MASAK KUY tidak berlaku lagi dan menjadi tanggung jawab pihak ketiga sepenuhnya.
+                                           \n\n7. PERUBAHAN PADA KETENTUAN PENGGUNA KAMI
+                                           \n\nKetentuan pengguna pada MASAK KUY dapat berubah sewaktu-waktu karena budaya dinamis pencipta. Disarankan bagi para pembaca untuk secara berkala halaman ini. Kami pun akan memberikan informasi jika ada perubahan.
+                                           \n\nKetentuan pengguna ini baru saja berlaku mulai tanggal 3 Juni 2020.
+                                           \n\n8. HUBUNGI KAMI
+                                           \n\nPertanyaan apapun yang berhubungan dengan ketentuan pengguna dapat langsung mengubungi nomor dibawah ini dan tim kami akan merespon kamu dengan segera
+                                           \n\n\tCONTACT PERSON:
+                                           \n\n\t\t>>> Dicky (prabowodicky@webmail.umm.ac.id)
+                                           \n\n\t\t>>> Decya (decyaholyginabenita@webmail.umm.ac.id)
+                                           \n\n\t\t>>> Bima (muhammadbimaalfaydl@webmail.umm.ac.id)
+                                           \n\n\t\t>>> Andre (andreawan@webmail.umm.ac.id)
+                                           \n\n"
+                            android:textColor="#000" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
